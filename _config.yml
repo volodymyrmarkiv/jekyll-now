@@ -6,7 +6,7 @@
 name: Володимир Марків
 
 # Short bio or description (displayed in the header)
-description: Хроніки майбутнього DevOps-a
+description: Хроніки майбутнього DevOpsʼa
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/volodymyrmarkiv/myblog/master/images/me.jpg
@@ -18,12 +18,12 @@ avatar: https://raw.githubusercontent.com/volodymyrmarkiv/myblog/master/images/m
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
-  facebook:
+  email: vmarkiv@protonmail.com
+  facebook: volodymyr.markiv.if
   flickr:
-  github: barryclark/jekyll-now
-  instagram:
-  linkedin:
+  github: bvolodymyrmarkiv
+  instagram: volodymyr.markiv
+  linkedin: volodymyr-markiv-168bba14
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter: caroot15
