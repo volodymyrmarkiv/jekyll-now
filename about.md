@@ -29,6 +29,6 @@ permalink: /about/
 У постійному використанні MacOSX, Arch і Windows. Не буду казати, що з них більше пободається
 та найменше чомусь Windows.
 
-### Contact me
+### Контакти
 
 [vmarkiv@protonmail.com](mailto:vmarkiv@protonmail.com)
