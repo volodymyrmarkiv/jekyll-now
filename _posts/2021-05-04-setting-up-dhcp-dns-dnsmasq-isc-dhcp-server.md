@@ -21,20 +21,20 @@ categories: DevOps Networks Linux
 
 Дана задача виконується на "ванільному" Ubuntu server 16.04, тому всі дії будуть актальні для цієї ситеми, хоч і не виключено, що також працюватимуть і у інших дистрибутивах.
 
-1. Встановимо dnsmasq
+1.  Встановимо dnsmasq
 
-`sudo apt update && sudo apt install dnsmasq`
+	`sudo apt update && sudo apt install dnsmasq`
 
-2. Можемо перевірити чи сервер запущений і працює командою 
+2.  Можемо перевірити чи сервер запущений і працює командою 
 
-`systemctl status dnsmasq` або `ps aux | grep dnsmasq`
+	`systemctl status dnsmasq` або `ps aux | grep dnsmasq`
 
 3. Спершу внесемо мережевий інтефейс на якому буде працювати dnsmasq та діапазон адресів, які можуть бути призначені
 
-`sudo vim /etc/dnsmasq.conf`
+	`sudo vim /etc/dnsmasq.conf`
 
-![dnsmasq-2021-05-05-1.png]({{ site.baseurl }}/images/dnsmasq-2021-05-04-1.png)
+	![dnsmasq-2021-05-05-1.png]({{ site.baseurl }}/images/dnsmasq-2021-05-04-1.png)
 
-![dnsmasq-2021-05-05-2.png]({{ site.baseurl }}/images/dnsmasq-2021-05-04-2.png)
+	![dnsmasq-2021-05-05-2.png]({{ site.baseurl }}/images/dnsmasq-2021-05-04-2.png)
 
 
