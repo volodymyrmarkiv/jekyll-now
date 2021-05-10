@@ -58,7 +58,7 @@ categories: DevOps Networks Linux
     ![dnsmasq-2021-05-04-2]({{ site.baseurl }}/images/20210504/dnsmasq-2021-05-04-2.png)
 
     Все, dnsmasq налаштований.
-    Можемо перевірити чи ми нігде не зафакапили налаштування командою `dnsmasq --test`
+    Можемо перевірити чи ми нігде не зафакапили налаштування. Введемо `dnsmasq --test` і якщо все добре, то продовжимо.
 
 4. Тепер візьмемось за налаштування мережевих інтерфейсів у віртуальних машинах. І почнемо з VM1.
 
@@ -136,7 +136,7 @@ categories: DevOps Networks Linux
 
     `sudo iptables -t nat -A POSTROUTING -o enp0s3 - j MASQUERADE`
 
-    Тепер `ping 8.8.8.8` VM2 чи VM3 буде успішний.
+    Тепер `ping 8.8.8.8` з VM2 чи VM3 буде успішним.
 
 ### ISC-DHCP-SERVER
 
