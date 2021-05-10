@@ -31,7 +31,7 @@ categories: DevOps Networks Linux
 
 	`sudo apt update && sudo apt install dnsmasq`
 
-2.  Можемо перевірити чи сервер запущений і працює командою:
+2.  Можемо перевірити чи сервер запущений і працює командою
 
 	`systemctl status dnsmasq` або `ps aux | grep dnsmasq`
 
@@ -41,23 +41,24 @@ categories: DevOps Networks Linux
 
     І налаштовуємо, як на картинці нижче або, як потрібно вам.
 
-    > interface=enp0s8
+    > interface=enp0s8  
 
     Тобто беремо другий інтерфейс або той, що "дивиться" у локальну мереж (бо ж перший це у нас NAT).
 
     ![dnsmasq-2021-05-04-1]({{ site.baseurl }}/images/20210504/dnsmasq-2021-05-04-1.png)
 
-    Тепер додамо діапазон адресів. У моєму випадку  це мережа 10.10.10.0, тому вносимо:
+    Тепер додамо діапазон адресів. У моєму випадку  це мережа 10.10.10.0, тому вносимо
 
-    > dhcp-range=10.10.10.10,10.10.10.20,12h
+    > dhcp-range=10.10.10.10,10.10.10.20,12h  
 
+    Де:  
     *10.10.10.10* - початова адреса з діапазону адресів, які будуть видаватися  
     *10.10.10.20* - кінцева адреса з діапазону адресів, які будуть видаватися  
     *12h* - так званий lease time або час дії ліцензії на адресу, тобто через який час dhcp сервер перестане асоціювати хост з IP-адресою  
 
     ![dnsmasq-2021-05-04-2]({{ site.baseurl }}/images/20210504/dnsmasq-2021-05-04-2.png)
 
-    Все, dnsmasq налаштований.
+    Все, dnsmasq налаштований.  
     Можемо перевірити чи ми нігде не зафакапили налаштування. Введемо `dnsmasq --test` і якщо все добре, то продовжимо.
 
 4. Тепер візьмемось за налаштування мережевих інтерфейсів у віртуальних машинах. І почнемо з VM1.
@@ -76,14 +77,12 @@ categories: DevOps Networks Linux
 
     А ось **enp0s8** налаштовуємо на статику:
 
-    > auto enp0s8
-    > 
-    > iface enp0s8 inet static
-    > 
-    > address 10.10.10.1
-    > 
-    > netmask 255.255.255.0
+    > auto enp0s8  
+    > iface enp0s8 inet static  
+    > address 10.10.10.1  
+    > netmask 255.255.255.0  
 
+    Де:  
     *inet static* - інтерфейс отримує статичну IP-адресу  
     *address 10.10.10.1* - конкретно прописуємо, яку IP-адресу надати  
     *netmask 255.255.255.0* - маска мережі, в даному випадку буде мінятись тільки останній октет  
@@ -97,7 +96,7 @@ categories: DevOps Networks Linux
 
     Схема схожа до налаштування VM1, тому спершу виконуємо `sudo ifdown enp0s8`
 
-    Далі редагуємо конфіг "interfaces":
+    Далі редагуємо конфіг "interfaces"
 
     `sudo vim /etc/network/interfaces`
 
@@ -106,11 +105,12 @@ categories: DevOps Networks Linux
     ![net-int-vm2-vm3-2021-05-04]({{ site.baseurl }}/images/20210504/net-int-vm2-vm3-2021-05-04.png)
 
     > auto enp0s3  
-    > iface enp0s3 inet dhcp
+    > iface enp0s3 inet dhcp  
 
-    *inet dhcp* - даємо інтерфейсу динамічну IP-адресу
+    Де:  
+    *inet dhcp* - даємо інтерфейсу динамічну IP-адресу  
 
-    Виконуємо `sudo ifup enp0s8` та на всякий пожежний `sudo systemctl restart networking.service`
+    Виконуємо `sudo ifup enp0s8` та на всякий пожежний `sudo systemctl restart networking.service`  
     Все, наші машинки налаштовані!
 
 6. Залишилось перевірити, які IP-адреси отримали наші машинки. Зробити це можна командою `ip a` або `ifconfig`
