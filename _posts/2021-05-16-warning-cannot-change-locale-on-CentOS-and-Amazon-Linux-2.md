@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "warning cannot change locale" на CentOS і Amazon Linux
+title: warning cannot change locale на CentOS і Amazon Linux
 date: 2021-05-16
 categories: Linux Locales Amazon CentOS
 ---
