@@ -15,7 +15,7 @@ avatar: https://raw.githubusercontent.com/volodymyrmarkiv/myblog/master/images/m
 # Flags below are optional
 #
 
-show_downloads: true
+# show_downloads: true
 
 # Includes an icon in the footer for each username you enter
 footer-links:
@@ -87,4 +87,4 @@ exclude:
   - README.md
   - CNAME
 
-theme: jekyll-theme-minimal
+theme: minima #jekyll-theme-minimal
