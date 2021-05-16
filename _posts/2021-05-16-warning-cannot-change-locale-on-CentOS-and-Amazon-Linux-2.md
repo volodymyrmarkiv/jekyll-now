@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "cannot change locale" у CentOS та Amazon Linux
+title: cannot change locale у CentOS та Amazon Linux
 date: 2021-05-16
 categories: Linux Locales Amazon CentOS
 ---
@@ -17,11 +17,9 @@ categories: Linux Locales Amazon CentOS
 
 ![locale-1]({{ site.baseurl }}/images/20210516/locale-1.png)
 
-```
-sudo tee -a /etc/environment > /dev/null <<EOF
-LANG=en_US.utf-8
-LC_ALL=en_US.utf-8
-EOF
-```
+`sudo tee -a /etc/environment > /dev/null <<EOF`  
+`LANG=en_US.utf-8`  
+`LC_ALL=en_US.utf-8`  
+`EOF`  
 
 Після перезавантаження чи реконекту по SSH повідомлення пропаде.
