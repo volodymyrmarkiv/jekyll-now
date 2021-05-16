@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Повідомдення "cannot change locale" у CentOS та Amazon Linux
+title: Повідомдення "cannot change locale" у консолі CentOS та Amazon Linux
 date: 2021-05-16
 categories: Linux Locales Amazon CentOS
 ---
