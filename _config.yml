@@ -10,12 +10,13 @@ description: Хроніки майбутнього DevOpsʼa
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/volodymyrmarkiv/myblog/master/images/me.jpg
+logo: /images/me.jpg
 
 #
 # Flags below are optional
 #
 
-# show_downloads: true
+show_downloads: true
 
 # Includes an icon in the footer for each username you enter
 footer-links:
